@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+</head>
+<body>
+<a id="controls-wrapper" style="text-decoration:none !important;border:none !important;"><img class="controls" src="assets/img/sound-mute.png" alt=""></a>
+<audio id="playTune" preload="auto" autoplay loop>
+<source src="assets/audio/Choose_Your_Path.mp3">
+</audio>
+
+<script type="text/javascript">
+$('#controls-wrapper').toggle(
+	function () {
+		document.getElementById('playTune').pause();
+		$('.controls').attr('src','assets/img/sound-play.png');
+	},
+	function () {
+		document.getElementById('playTune').play();
+		$('.controls').attr('src','assets/img/sound-mute.png');
+	}
+);
+  
+  
+</script>
+
+
+</body>
+</html>
