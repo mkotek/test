@@ -3,6 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Untitled Document</title>
+  <style type="text/css">
+			.header{margin-bottom: 0;}
+
+			.ms-fullscreen-template{
+				min-height: 250px;
+			}
+
+			.master-slider{
+				height: 100%;
+				font-family: Lato, arial, sans-serif;
+			}
+          
+          .shade {
+              position: absolute;
+              top:0;
+              left:0;
+              width:100vw;
+              height:100vh;
+              z-index: 2;
+              background-color: rgba(49, 49, 49, 0.66);
+          }
+
+          
+          #controls-wrapper {
+		cursor: pointer;
+		position: fixed;
+		top: 2vw;
+		right: 2vw;
+		z-index: 99;
+	}
+	.controls {
+		width: 4vw;
+		height: 4vw;
+     
+	}
+          
+		
+		</style>
 </head>
 <body>
 <a id="controls-wrapper" style="text-decoration:none !important;border:none !important;"><img class="controls" src="assets/img/sound-mute.png" alt=""></a>
