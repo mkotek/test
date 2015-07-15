@@ -7,13 +7,13 @@ The Video Storage Template was created to showcase how a file from Rise Stroage 
 
 ##Steps to run the Video Storage Template:##
 
-1. Fork or download the entire content-retail-qrcode repository.  
+1. Fork or download the entire content-video-storage repository.  
 ![alt tag](images/readme-step1.jpg)
 
-2. Modify the files within the content-retail-qrcode folder directory to fit your needs (see below on how to modify specific elements).  
+2. Modify the files within the content-video-storage folder directory to fit your needs (see below on how to modify specific elements).  
 ![alt tag](images/readme-step2.jpg)
 
-3. Host the entire “content-retail-qrcode” folder directory in rise vision storage or your web hosting service.  
+3. Host the entire “content-video-storage” folder directory in rise vision storage or your web hosting service.  
 ![alt tag](images/readme-step3.jpg)
 
 4. Copy the link to the index.html file where you have it hosted and insert the url into a schedule. (you can also add this link to the url gadget within a presentation)  
@@ -22,61 +22,30 @@ The Video Storage Template was created to showcase how a file from Rise Stroage 
 
 ##Directions to Modify the Video Storage Template:##
 
-####Changing the Animated Background Image
-The background image is loaded by using the Rise Storage Web Component.
-To change the image open index.html, locate the following code and modify the rise-storage tag to reflect your company id, folder and image name:
-
-```
-<div id="background">
-	<rise-storage companyId="395c64e5-2930-460b-881e-009aabb157df" folder="content-retail-qrcode" fileName="retail-qrcode-bg.jpg"></rise-storage>
-  <img id="storage-image" src="" />
-  <script>
-    var storage = document.querySelector("rise-storage"),
-      image = document.querySelector("#storage-image");
-
-    storage.addEventListener("rise-storage-response", function(e) {
-      image.setAttribute("src", e.detail[0]);
-    });
-  </script>
-</div>
-```
-
-The components folder is an assortment of dependices needed for the rise storage web component to work.
-
-For more information on how to utilze rise storage web component. Please refer to the readme.md within the following repo:
-https://github.com/Rise-Vision/web-component-rise-storage
-
-The style of the animation is done within css/style-main.css file. Look for the keyframes called ```@-webkit-keyframes "slidein"```.
-
-####Changing the Quote Text
-Open index.html, the quote content is nested within the div ```<div id="quote-container">``` Modify the text within the span tags to meet your needs. 
+####Changing the Text Content
+Open index.html, the text content is nested within the following div ```<div class="wrapper">```. Modify the h1 tags within this div to meet your needs. The tag line is held by a span tag called ```<span class="tag-line">```.
 
 The style of the quote content is controlled within css/style-main.css. Look for the comment called ```Quote Content```.
 
-####Changing the QR Code
-Open index.html, locate the following code and modify the src url of the source tag to the path of your qr code graphic.:
+####Changing the Video / Text Transitions
+The Video Storage Template leverages a jquery plugin called Bigvideo.js to fit-to-fill background video to websites.
+The main controls and variables can be changed within 
+```js/bigvideo.js``` Detailed documentaion can be found on their github repo:
+https://github.com/dfcb/BigVideo.js
 
-```
-<img id="qrcode" src="images/qrcode.png">
-```
+A detailed tutorial on how the text and video slideshow were implemented can be seen here: http://tympanus.net/codrops/2012/09/19/fullscreen-video-slideshow-with-bigvideo-js/
 
-The animation is done within css/qrcode-animation.css file. Look for the keyframes called ```@-webkit-keyframes "scan"``` and ```@-webkit-keyframes "pulse"```.
- 
- 
-####Changing the QR Code Destination Page
-When a user scans the qr code they will be taken to the coupon.html page. The style of this page is controlled by the css/coupon.css. 
-If you would like it to continue to take people to this page do not change the qr graphic. 
-
-####Miscellaneous Items
-The text size and various other elements within css files use viewport sizing.
-This is a way to dynamically size elements without the use of media queries.
-For more information I suggest this article: http://css-tricks.com/viewport-sized-typography/
+####Changing the Videos (rise-storage web component)
+All the videos in the Video Storage Template are hosted on Rise Vision Storage https://storage.risevision.com/ using the rise-storage web component. Detailed instructions on how to configure can be found in the github readme: https://github.com/Rise-Vision/web-component-rise-storage
 
 ## Built With
 actual tools used
 - HTML
 - CSS
 - Javascript
+- Jquery
+- BigVideo.js
+- rise-storage Web Component
 
 Video Storage Template works in conjunction with [Rise Vision](http://www.risevision.com), the [digital signage management application](http://rva.risevision.com/) that runs on [Google Cloud](https://cloud.google.com).
 
@@ -103,8 +72,8 @@ What actually happened. (screenshots / video captures always help)
 All contributions are greatly appreciated and welcome! If you would first like to sound out your contribution ideas please post your thoughts to our [community](http://community.risevision.com), otherwise submit a pull request and we will do our best to incorporate it.
 
 ### Suggested Contributions
-- Alternative ways to animate background
-- Alternative ways to engage users to scan qr code
+- Alternative ways to do video transitions
+- Auto loop video rotation on timed interval
 - i18n Language Support
 
 ## Resources
