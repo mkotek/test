@@ -1,5 +1,5 @@
 
-# Video Storage![Build Status](http://devtools1.risevision.com:8080/job/Storage-Client-BranchPush/badge/icon)
+# Video Storage
 
 ## Introduction
 
@@ -8,16 +8,16 @@ The Video Storage Template was created to showcase how a file from Rise Stroage 
 ##Steps to run the Video Storage Template:##
 
 1. Fork or download the entire content-video-storage repository.  
-![alt tag](images/readme-step1.jpg)
+![alt tag](img/readme-step1.jpg)
 
 2. Modify the files within the content-video-storage folder directory to fit your needs (see below on how to modify specific elements).  
-![alt tag](images/readme-step2.jpg)
+![alt tag](img/readme-step2.jpg)
 
 3. Host the entire “content-video-storage” folder directory in rise vision storage or your web hosting service.  
-![alt tag](images/readme-step3.jpg)
+![alt tag](img/readme-step3.jpg)
 
 4. Copy the link to the index.html file where you have it hosted and insert the url into a schedule. (you can also add this link to the url gadget within a presentation)  
-![alt tag](images/readme-step4.jpg)
+![alt tag](img/readme-step4.jpg)
 
 
 ##Directions to Modify the Video Storage Template:##
