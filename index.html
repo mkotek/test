@@ -3,10 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Fullscreen Video Slideshow with BigVideo.js</title>
+  <title>Content Video Storage</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="shortcut icon" href="../favicon.ico"> 
+  
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Video Storage">
+  <meta itemprop="description" content="The Video Storage Template was created to showcase how a file from Rise Stroage can be levered in a HTML page.">
+  <meta itemprop="image" content="http://rise-vision.github.io/content-video-storage/img/video-storage-screenshot.jpg">
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RiseVision">
+  <meta name="twitter:title" content="Video Storage">
+  <meta name="twitter:description" content="The Video Storage Template was created to showcase how a file from Rise Stroage can be levered in a HTML page.">
+  <meta name="twitter:image:src" content="http://rise-vision.github.io/content-video-storage/img/video-storage-screenshot.jpg">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Video Storage" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://rise-vision.github.io/content-video-storage/" />
+  <meta property="og:image" content="http://rise-vision.github.io/content-video-storage/img/video-storage-screenshot.jpg" />
+  <meta property="og:description" content="The Video Storage Template was created to showcase how a file from Rise Stroage can be levered in a HTML page." />
+  
+  <!--Fav Icon-->
+<link rel="shortcut icon" href="http://rise-vision.github.io/content-video-storage/favicon.ico" />
+  
+  <!--Fonts-->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   
   <!--Big Video-->
   <link rel="stylesheet" href="css/style.css">
@@ -18,33 +42,33 @@
   <link rel="import" href="rise-storage.html">
   
   <!--Jquery for Music-->
-  <script src="assets/js/jquery.js"></script>
+  <script src="js/jquery.js"></script>
 </head>
 
 <body>            
   <rise-storage id="sorting" companyId="395c64e5-2930-460b-881e-009aabb157df" folder="content-video-storage"
     sort="name" sortDirection="asc" fileType="video"></rise-storage>
-
+  
+<!--Header-->
   <header>
     <img id="logo" src="img/rise-u-logo.png" />
-    <a id="controls-wrapper" style="text-decoration:none !important;border:none !important;"><img class="controls" src="assets/img/sound-mute.png" alt=""></a>
+    <!--Audio-->
+    <a id="controls-wrapper" style="text-decoration:none !important;border:none !important;"><img class="controls" src="img/sound-mute.png" alt=""></a>
     <audio id="playTune" preload="auto" autoplay loop>
-    <source src="assets/audio/Choose_Your_Path.mp3">
+    <source src="audio/Choose_Your_Path.mp3">
     </audio>
   </header>
-  
   <span class="tag-line">Why Choose Rise University?</span>
   <div class="wrapper">
-      <div class="screen" id="screen-1" data-video="">
+      <div class="screen" id="screen-1" data-video="https://storage.googleapis.com/risemedialibrary-395c64e5-2930-460b-881e-009aabb157df/content-video-storage/video1.webm">
         <div class="shade"></div>
           <img src="img/image1.jpg" class="big-image" />
-
-          <h1 class="video-title">Outdoor<br/>Recreation</h1>
+          <h1 class="video-title">Outdoor<br/> Recreation</h1>
       </div>
       <div class="screen" id="screen-2" data-video="">
         <div class="shade"></div>
           <img src="img/image2.jpg" class="big-image" />
-          <h1 class="video-title">Top Ranked Athletes</h1>
+          <h1 class="video-title">Top Ranked<br/> Athletes</h1>
       </div>
       <div class="screen" id="screen-3" data-video="">
           <img src="img/image3.jpg" class="big-image" />
@@ -61,6 +85,17 @@
   <nav id="next-btn">
       <a href="#" class="next-icon"></a>
   </nav>
+  
+  <!--Footer Icons-->
+  <!--Github Icon-->
+  <div id="github">
+    <a type="button" id="gitbtn" href="https://github.com/Rise-Vision/content-video-storage" target="_blank"><i class="fa fa-github fa-lg "></i></a>
+  </div>
+
+  <!--Rise Icon-->
+  <div id="rise">
+    <a href="http://www.risevision.com/" target="_blank"><img id="risebtn" src="img/rise-icon.png"/></a>
+  </div>  
 
   <!-- BigVideo Dependencies -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
@@ -191,18 +226,21 @@
           }
       });
   </script>
+  <!--Script for Audio-->
   <script type="text/javascript">
     $('#controls-wrapper').toggle(
       function () {
           document.getElementById('playTune').pause();
-          $('.controls').attr('src','assets/img/sound-play.png');
+          $('.controls').attr('src','img/sound-play.png');
       },
       function () {
           document.getElementById('playTune').play();
-          $('.controls').attr('src','assets/img/sound-mute.png');
+          $('.controls').attr('src','img/sound-mute.png');
       }
     );
   </script>
+  
+  <!--Script for Rise Storage Web Component-->
   <script>
     var storage = document.querySelector("rise-storage"),  
     video1 = document.querySelector("#screen-1");
