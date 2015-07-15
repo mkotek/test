@@ -1,351 +1,260 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Content Video Storage</title>
+  <meta name="viewport" content="width=device-width">
+  
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Video Storage">
+  <meta itemprop="description" content="The Video Storage Template was created to showcase how a file from Rise Stroage can be levered in a HTML page.">
+  <meta itemprop="image" content="http://rise-vision.github.io/content-video-storage/img/video-storage-screenshot.jpg">
 
-		<title>Master Slider Fullscreen Template</title>	
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RiseVision">
+  <meta name="twitter:title" content="Video Storage">
+  <meta name="twitter:description" content="The Video Storage Template was created to showcase how a file from Rise Stroage can be levered in a HTML page.">
+  <meta name="twitter:image:src" content="http://rise-vision.github.io/content-video-storage/img/video-storage-screenshot.jpg">
 
-		<!-- bootstrap style sheet -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		
-		<!-- syntaxHilighter style sheet -->
-		<link rel="stylesheet" type="text/css" href="assets/syntax-highlighter/styles/shCore.css" media="all">
-		<link rel="stylesheet" type="text/css" href="assets/syntax-highlighter/styles/shThemeDefault.css" media="all">
-		
-		<!-- main style -->
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all">
-		
-		<!-- Base MasterSlider style sheet -->
-		<link rel="stylesheet" href="masterslider/style/masterslider.css" />
-		
-		<!-- Master Slider Skin -->
-		<link href="masterslider/skins/default/style.css" rel='stylesheet' type='text/css'>
-		 
-		<!-- MasterSlider Template Style -->
-		<link href='assets/css/ms-fullscreen.css' rel='stylesheet' type='text/css'>
-		
-		<!-- google font Lato -->
-		<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,900' rel='stylesheet' type='text/css'>
-		
-		
-		<!-- jQuery -->
-		<script src="masterslider/jquery.min.js"></script>
-		<script src="masterslider/jquery.easing.min.js"></script>
-		
-		<!-- Master Slider -->
-		<script src="masterslider/masterslider.min.js"></script>
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Video Storage" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://rise-vision.github.io/content-video-storage/" />
+  <meta property="og:image" content="http://rise-vision.github.io/content-video-storage/img/video-storage-screenshot.jpg" />
+  <meta property="og:description" content="The Video Storage Template was created to showcase how a file from Rise Stroage can be levered in a HTML page." />
+  
+  <!--Fav Icon-->
+<link rel="shortcut icon" href="http://rise-vision.github.io/content-video-storage/favicon.ico" />
+  
+  <!--Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!--Big Video-->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bigvideo.css">
+  <script src="js/modernizr-2.5.3.min.js"></script>
+  
+  <!--Rise Storage Component-->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="rise-storage.html">
+  
+  <!--Jquery for Music-->
+  <script src="js/jquery.js"></script>
+</head>
 
-		<!-- Tabs -->
-		<script src="assets/js/tab.js"></script>
-		<script src="assets/syntax-highlighter/scripts/shCore.js"></script>
-		<script src="assets/syntax-highlighter/scripts/shBrushXml.js"></script>
-		<script src="assets/syntax-highlighter/scripts/shBrushCss.js"></script>
-		<script src="assets/syntax-highlighter/scripts/shBrushJScript.js"></script>
-      
-      <!--Video-->
-      <script src="assets/js/jquery.js"></script>
-      <!--<script src="assets/js/video-javascript.js"></script>-->
-      <!--<link href='assets/css/video-style.css' rel='stylesheet' type='text/css'>-->
-      <!--<script type='text/javascript'>
+<body>            
+  <rise-storage id="sorting" companyId="395c64e5-2930-460b-881e-009aabb157df" folder="content-video-storage"
+    sort="name" sortDirection="asc" fileType="video"></rise-storage>
+  
+<!--Header-->
+  <header>
+    <img id="logo" src="img/rise-u-logo.png" />
+    <!--Audio-->
+    <a id="controls-wrapper" style="text-decoration:none !important;border:none !important;"><img class="controls" src="img/sound-mute.png" alt=""></a>
+    <audio id="playTune" preload="auto" autoplay loop>
+    <source src="audio/Choose_Your_Path.mp3">
+    </audio>
+  </header>
+  <span class="tag-line">Why Choose Rise University?</span>
+  <div class="wrapper">
+      <div class="screen" id="screen-1" data-video="https://storage.googleapis.com/risemedialibrary-395c64e5-2930-460b-881e-009aabb157df/content-video-storage/video1.webm">
+        <div class="shade"></div>
+          <img src="img/image1.jpg" class="big-image" />
+          <h1 class="video-title">Outdoor<br/> Recreation</h1>
+      </div>
+      <div class="screen" id="screen-2" data-video="">
+        <div class="shade"></div>
+          <img src="img/image2.jpg" class="big-image" />
+          <h1 class="video-title">Top Ranked<br/> Athletes</h1>
+      </div>
+      <div class="screen" id="screen-3" data-video="">
+          <img src="img/image3.jpg" class="big-image" />
+          <h1 class="video-title">Award Winning <br/>Culinary Arts</h1>
+          <div class="shade"></div>
+      </div>
+      <div class="screen" id="screen-4" data-video="">
+        <div class="shade"></div>
+          <img src="img/image4.jpg" class="big-image" />
+          <h1 class="video-title">World Renowned <br/>Music Program</h1>
+      </div>
+  </div>
 
-$(document).ready(function() {
-	$('video').videoPlayer({
-		'playerWidth' : 1,
-		'videoClass' : 'video'	
-	});
-});
+  <nav id="next-btn">
+      <a href="#" class="next-icon"></a>
+  </nav>
+  
+  <!--Footer Icons-->
+  <!--Github Icon-->
+  <div id="github">
+    <a type="button" id="gitbtn" href="https://github.com/Rise-Vision/content-video-storage" target="_blank"><i class="fa fa-github fa-lg "></i></a>
+  </div>
 
-</script>-->
+  <!--Rise Icon-->
+  <div id="rise">
+    <a href="http://www.risevision.com/" target="_blank"><img id="risebtn" src="img/rise-icon.png"/></a>
+  </div>  
 
-      
-      <!-- Storage Component-->
-      <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-      <link rel="import" href="rise-storage.html">
-		
-		<style type="text/css">
-			.header{margin-bottom: 0;}
+  <!-- BigVideo Dependencies -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
+  <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+  <script src="js/jquery.imagesloaded.min.js"></script>
+  <script src="http://vjs.zencdn.net/c/video.js"></script>
 
-			.ms-fullscreen-template{
-				min-height: 250px;
-			}
+  <!-- BigVideo -->
+  <script src="js/bigvideo.js"></script>
 
-			.master-slider{
-				height: 100%;
-				font-family: Lato, arial, sans-serif;
-			}
-          
-          .shade {
-              position: absolute;
-              top:0;
-              left:0;
-              width:100vw;
-              height:100vh;
-              z-index: 2;
-              background-color: rgba(49, 49, 49, 0.66);
+  <!-- Tutorial Demo -->
+  <script src="js/jquery.transit.min.js"></script>
+  <script>
+      $(function() {
+
+          // Use Modernizr to detect for touch devices, 
+          // which don't support autoplay and may have less bandwidth, 
+          // so just give them the poster images instead
+          var screenIndex = 1,
+              numScreens = $('.screen').length,
+              isTransitioning = false,
+              transitionDur = 1000,
+              BV,
+              videoPlayer,
+              isTouch = Modernizr.touch,
+              $bigImage = $('.big-image'),
+              $window = $(window);
+
+          if (!isTouch) {
+              // initialize BigVideo
+              BV = new $.BigVideo({forceAutoplay:isTouch});
+              BV.init();
+              showVideo();
+
+              BV.getPlayer().addEvent('loadeddata', function() {
+                  onVideoLoaded();
+              });
+
+              // adjust image positioning so it lines up with video
+              $bigImage
+                  .css('position','relative')
+                  .imagesLoaded(adjustImagePositioning);
+              // and on window resize
+              $window.on('resize', adjustImagePositioning);
           }
 
-          
-          #controls-wrapper {
-		cursor: pointer;
-		position: fixed;
-		top: 2vw;
-		right: 2vw;
-		z-index: 99;
-	}
-	.controls {
-		width: 4vw;
-		height: 4vw;
-     
-	}
-          
-		
-		</style>
-	</head>
-		
-	<body>
-	<!--rise-storage web component-->
-  <rise-storage id="sorting" companyId="395c64e5-2930-460b-881e-009aabb157df" folder="content-video-storage"
-    sort="name" sortDirection="asc" ></rise-storage>
-     
-		<!-- header -->
-		<header id="logoHeader">
-        <img id="logo" src="" />
-         
-          <a id="controls-wrapper" style="text-decoration:none !important;border:none !important;"><img class="controls" src="assets/img/sound-mute.png" alt=""></a>
-<audio id="playTune" preload="auto" autoplay loop>
-<source src="assets/audio/Choose_Your_Path.mp3">
-</audio>
+          // Next button click goes to next div
+          $('#next-btn').on('click', function(e) {
+              e.preventDefault();
+              if (!isTransitioning) {
+                  next();
+              }
+          });
 
-<script type="text/javascript">
-$('#controls-wrapper').toggle(
-	function () {
-		document.getElementById('playTune').pause();
-		$('.controls').attr('src','assets/img/sound-play.png');
-	},
-	function () {
-		document.getElementById('playTune').play();
-		$('.controls').attr('src','assets/img/sound-mute.png');
-	}
-);
-  
-  
-</script>
-		</header>
-      
-     
-		<!-- end of header -->
-	<!-- template -->
-	<div class="ms-fullscreen-template" id="slider1-wrapper">
-		<!-- masterslider -->
-		<div class="master-slider ms-skin-default" id="masterslider">
-		    <div class="ms-slide slide-1" data-delay="8">
-              <div class="shade"></div>
-              <img id="image1" src="" />
-              
-               <video id="video1" data-autopause="false" data-mute="true" data-loop="true" data-fill-mode="fill" autoplay loop>
-    <source src="" type="video/webm">
-  </video>
-              
-		    
-		        <h4 class="ms-layer small-text"
-					data-type="text"
-					data-effect="skewleft(25,250)"
-					data-duration="1000"
-					data-ease="easeOutQuart"
-					data-delay="0"
-		        >
-		        	WHY CHOOSE RISE UNIVERSITY?
-		        </h4>
- 				<h3 class="ms-layer medium-text"
-					data-type="text"
-					data-effect="skewright(25,250)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="200"
-		        >
-		        	OUTDOOR
-		        </h3>
-				<h3 class="ms-layer big-text"
-					data-type="text"
-					data-effect="scalebottom(1.1,1.1,50)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="400"
-		        >
-		        	RECREATION
-		        </h3>
-		    </div>
-		    <div class="ms-slide slide-2" data-delay="8">
-              <div class="shade"></div>
-		       <h4 class="ms-layer small-text"
-					data-type="text"
-					data-effect="skewleft(25,250)"
-					data-duration="1000"
-					data-ease="easeOutQuart"
-					data-delay="0"
-		        >
-		        	WHY CHOOSE RISE UNIVERSITY?
-		        </h4>
- 				<h3 class="ms-layer medium-text"
-					data-type="text"
-					data-effect="skewright(25,250)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="200"
-		        >
-		        	TOP 10 RANKED US
-		        </h3>
-				<h3 class="ms-layer big-text"
-					data-type="text"
-					data-effect="scalebottom(1.1,1.1,50)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="400"
-		        >
-		        	SPORTS PROGRAM
-		        </h3>
-               <video id="video2" data-autopause="false" data-mute="true" data-loop="true" data-fill-mode="fill" autoplay loop>
-    <source src="" type="video/webm">
-  </video>
-              <img id="image2" src="" />
-		    
-		    </div>
-		    <div class="ms-slide slide-3" data-delay="8">
-              <div class="shade"></div>
-		        <h4 class="ms-layer small-text"
-					data-type="text"
-					data-effect="skewleft(25,250)"
-					data-duration="1000"
-					data-ease="easeOutQuart"
-					data-delay="0"
-		        >
-		        	WHY CHOOSE RISE UNIVERSITY?
-		        </h4>
- 				<h3 class="ms-layer medium-text"
-					data-type="text"
-					data-effect="skewright(25,250)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="200"
-		        >
-		        	AWARD WINNING
-		        </h3>
-				<h3 class="ms-layer big-text"
-					data-type="text"
-					data-effect="scalebottom(1.1,1.1,50)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="400"
-		        >
-		        	CULINARY ARTS
-		        </h3>
-               <video id="video3" data-autopause="false" data-mute="true" data-loop="true" data-fill-mode="fill" autoplay loop>
-    <source src="" type="video/webm">
-  </video>
-              <img id="image3" src="" />
-		        
-		    </div>
-		    <div class="ms-slide slide-4" data-delay="8">
-              <div class="shade"></div>
-				<h4 class="ms-layer small-text"
-					data-type="text"
-					data-effect="skewleft(25,250)"
-					data-duration="1000"
-					data-ease="easeOutQuart"
-					data-delay="0"
-		        >
-		        	WHY CHOOSE RISE UNIVERSITY?
-		        </h4>
- 				<h3 class="ms-layer medium-text"
-					data-type="text"
-					data-effect="skewright(25,250)"
-					data-duration="1500"
-					data-ease="easeOutQuart"
-					data-delay="200"
-		        >
-		        	WORLD RENOWNED
-		        </h3>
-				<h3 class="ms-layer big-text"
-					data-type="text"
-					data-effect="scalebottom(1.1,1.1,50)"
-					data-duration="500"
-					data-ease="easeOutQuart"
-					data-delay="400"
-		        >
-		        	MUSIC PROGRAM
-		        </h3>
- 
+          function showVideo() {
+              BV.show($('#screen-'+screenIndex).attr('data-video'),{ambient:true});
+          }
 
-  
-  <video id="video4" data-autopause="false" data-mute="true" data-loop="true" data-fill-mode="fill" autoplay loop>
-    <source src="" type="video/webm">
-  </video>
-                  <img id="image4" src="" />
+          function next() {
+              isTransitioning = true;
 
+              // update video index, reset image opacity if starting over
+              if (screenIndex === numScreens) {
+                  $bigImage.css('opacity',1);
+                  screenIndex = 1;
+              } else {
+                  screenIndex++;
+              }
+
+              if (!isTouch) {
+                  $('#big-video-wrap').transit({'left':'-100%'},transitionDur)
+              }
+
+              (Modernizr.csstransitions)?
+                  $('.wrapper').transit(
+                      {'left':'-'+(100*(screenIndex-1))+'%'},
+                      transitionDur,
+                      onTransitionComplete):
+                  onTransitionComplete();
+          }
+
+          function onVideoLoaded() {
+              $('#screen-'+screenIndex).find('.big-image').transit({'opacity':0},500)
+          }
+
+          function onTransitionComplete() {
+              isTransitioning = false;
+              if (!isTouch) {
+                  $('#big-video-wrap').css('left',0);
+                  showVideo();
+              }
+          }
+
+          function adjustImagePositioning() {
+              $bigImage.each(function(){
+                  var $img = $(this),
+                      img = new Image();
+
+                  img.src = $img.attr('src');
+
+                  var windowWidth = $window.width(),
+                      windowHeight = $window.height(),
+                      r_w = windowHeight / windowWidth,
+                      i_w = img.width,
+                      i_h = img.height,
+                      r_i = i_h / i_w,
+                      new_w, new_h, new_left, new_top;
+
+                  if( r_w > r_i ) {
+                      new_h   = windowHeight;
+                      new_w   = windowHeight / r_i;
+                  }
+                  else {
+                      new_h   = windowWidth * r_i;
+                      new_w   = windowWidth;
+                  }
+
+                  $img.css({
+                      width   : new_w,
+                      height  : new_h,
+                      left    : ( windowWidth - new_w ) / 2,
+                      top     : ( windowHeight - new_h ) / 2
+                  })
+
+              });
+
+          }
+      });
+  </script>
+  <!--Script for Audio-->
+  <script type="text/javascript">
+    $('#controls-wrapper').toggle(
+      function () {
+          document.getElementById('playTune').pause();
+          $('.controls').attr('src','img/sound-play.png');
+      },
+      function () {
+          document.getElementById('playTune').play();
+          $('.controls').attr('src','img/sound-mute.png');
+      }
+    );
+  </script>
   
-          </div>
-		</div>
-		<!-- end of masterslider -->
-	</div>
-	<!-- end of template -->
-	</body>
-  
-    <!--Rise Storage Component -->
-	 <script>
+  <!--Script for Rise Storage Web Component-->
+  <script>
     var storage = document.querySelector("rise-storage"),  
-    image1 = document.querySelector("#image1");
-    image2 = document.querySelector("#image2");
-    image3 = document.querySelector("#image3");
-    image4 = document.querySelector("#image4");
-    logo = document.querySelector("#logo");
-    video1 = document.querySelector("#video1");
-    video2 = document.querySelector("#video2");
-    video3 = document.querySelector("#video3");
-    video4 = document.querySelector("#video4");
+    video1 = document.querySelector("#screen-1");
+    video2 = document.querySelector("#screen-2");
+    video3 = document.querySelector("#screen-3");
+    video4 = document.querySelector("#screen-4");
 
     storage.addEventListener("rise-storage-response", function(e) {
-    image1.setAttribute("src", e.detail.files[0].url);
-    image2.setAttribute("src", e.detail.files[1].url);
-    image3.setAttribute("src", e.detail.files[2].url);
-    image4.setAttribute("src", e.detail.files[3].url);
-    logo.setAttribute("src", e.detail.files[4].url);
-    video1.setAttribute("src", e.detail.files[5].url);
-    video2.setAttribute("src", e.detail.files[6].url);
-    video3.setAttribute("src", e.detail.files[7].url);
-    video4.setAttribute("src", e.detail.files[8].url);
+    video1.setAttribute("data-video", e.detail.files[0].url);
+    video2.setAttribute("data-video", e.detail.files[1].url);
+    video3.setAttribute("data-video", e.detail.files[2].url);
+    video4.setAttribute("data-video", e.detail.files[3].url);
 
     });
   </script>
- 
-  <!--Master Slider Script-->
-	<script type="text/javascript">		
-	
-		var slider = new MasterSlider();
-
-		slider.control('arrows' , {autohide:false}); // here we've added arrow control to the slider.
-		slider.control('bullets' , {autohide:false});	
-
-		slider.setup('masterslider' , {
-			width:1920,
-			height:1080,
-			space:0,
-			view:'basic',
-			layout:'fullscreen',
-			fullscreenMargin:0,
-			speed:40,
-          autoplay:true,
-          loop:true,
-          view:"mask",
-          overPause:false
-		});
-
-		$('#myTab a').click(function (e) {
-		  e.preventDefault()
-		  $(this).tab('show')
-		});
-
-		SyntaxHighlighter.all();
-		
-	</script>
+</body>
 </html>
