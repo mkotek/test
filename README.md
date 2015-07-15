@@ -25,10 +25,10 @@ The Video Storage Template was created to showcase how a file from Rise Stroage 
 ####Changing the Text Content
 Open index.html, the text content is nested within the following div ```<div class="wrapper">```. Modify the h1 tags within this div to meet your needs. The tag line is held by a span tag called ```<span class="tag-line">```.
 
-The style of the quote content is controlled within css/style-main.css. Look for the comment called ```Quote Content```.
+The style of the text content is controlled within ```css/style.css```. 
 
 ####Changing the Video / Text Transitions
-The Video Storage Template leverages a jquery plugin called Bigvideo.js to fit-to-fill background video to websites.
+The Video Storage Template leverages a jquery plugin called Bigvideo.js to fit-to-fill videos to the background.
 The main controls and variables can be changed within 
 ```js/bigvideo.js``` Detailed documentaion can be found on their github repo:
 https://github.com/dfcb/BigVideo.js
@@ -36,7 +36,7 @@ https://github.com/dfcb/BigVideo.js
 A detailed tutorial on how the text and video slideshow were implemented can be seen here: http://tympanus.net/codrops/2012/09/19/fullscreen-video-slideshow-with-bigvideo-js/
 
 ####Changing the Videos (rise-storage web component)
-All the videos in the Video Storage Template are hosted on Rise Vision Storage https://storage.risevision.com/ using the rise-storage web component. Detailed instructions on how to configure can be found in the github readme: https://github.com/Rise-Vision/web-component-rise-storage
+All the videos in the Video Storage Template are hosted on Rise Vision Storage https://storage.risevision.com/ using the rise-storage web component. Detailed instructions on how to configure this component can be found in the readme of the github repo: https://github.com/Rise-Vision/web-component-rise-storage
 
 ## Built With
 actual tools used
